@@ -3,7 +3,7 @@
 //  MemeMe_App
 //
 //  Created by Richard Lipski on 24.01.21.
-//
+//  Update on 25.01.21
 
 import UIKit
 
@@ -19,9 +19,13 @@ UINavigationControllerDelegate {
     
 //  pickAnImage Button
     @IBAction func pickAnImage(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            present(imagePicker, animated: true, completion: nil)
+        let pickerController = UIImagePickerController()
+         pickerController.allowsEditing = false
+         pickerController.delegate = self
+             pickerController.sourceType = .photoLibrary
+
+         
+         present(pickerController, animated: true, completion: nil)
         
         }
 
