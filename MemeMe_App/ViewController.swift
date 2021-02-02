@@ -14,7 +14,6 @@ import Foundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
-    //let textFieldDelegate = MemetextFieldDelegate()
     var memeImage: UIImage!
     
 //Outlets
@@ -127,14 +126,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     fileprivate func prepareView() {
         
         //Prepare Text fields within image view
-        self.topTextField.delegate = self.textFieldDelegate
-        self.bottomTextField.delegate = self.textFieldDelegate
+        self.topTextField.delegate = self
+        self.bottomTextField.delegate = self
         
         self.setTextFieldProps(self.topTextField)
         self.setTextFieldProps(self.bottomTextField)
         
         //share button settings
-        self.shareButton.isEnabled = false
+        self.shareButton.isEnabled = true
     }
     
     fileprivate func hideToolbars(_ hide: Bool) {
