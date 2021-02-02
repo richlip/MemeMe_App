@@ -48,8 +48,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cameraController.sourceType = .camera
         present(cameraController, animated: true, completion: nil)
         }
-   
-    @IBAction func share() {
+    
+       @IBAction func share() {
         memeImage = generateImage()
         let activity = UIActivityViewController(activityItems: [memeImage!], applicationActivities: nil)
         show(activity, sender: self)
