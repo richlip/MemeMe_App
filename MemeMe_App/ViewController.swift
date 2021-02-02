@@ -6,6 +6,7 @@
 //  Update on 25.01.21
 //  Update on 26.01.21
 //  Update on 30.01.21
+//  Update on 02.02.21
 
 import UIKit
 import Foundation
@@ -13,7 +14,7 @@ import Foundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
-    let textFieldDelegate = MemetextFieldDelegate()
+    //let textFieldDelegate = MemetextFieldDelegate()
     var memeImage: UIImage!
     
 //Outlets
