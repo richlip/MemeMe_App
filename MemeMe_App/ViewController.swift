@@ -49,6 +49,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(cameraController, animated: true, completion: nil)
         }
     
+    // share Action
        @IBAction func share() {
         memeImage = generateImage()
         let activity = UIActivityViewController(activityItems: [memeImage!], applicationActivities: nil)
@@ -59,6 +60,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 return
             }
         }
+    }
+    fileprivate func hideToolbars(_ hide: Bool) {
+        topToolbar.isHidden = hide
+        bottomToolbar.isHidden = hide
     }
 
     
@@ -133,13 +138,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.setTextFieldProps(self.bottomTextField)
         
         //share button settings
-        self.shareButton.isEnabled = true
+        self.shareButton.isEnabled = false
     }
     
-    fileprivate func hideToolbars(_ hide: Bool) {
-        topToolbar.isHidden = hide
-        bottomToolbar.isHidden = hide
-    }
+
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
