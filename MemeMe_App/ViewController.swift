@@ -7,6 +7,7 @@
 //  Update on 26.01.21
 //  Update on 30.01.21
 //  Update on 02.02.21
+//  Update on 04.02.21
 
 import UIKit
 import Foundation
@@ -21,7 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 @IBOutlet weak var bottomToolbar: UIToolbar!
 @IBOutlet weak var pickAnImageButton: UIBarButtonItem!
 @IBOutlet weak var pickAnImageFromCamera: UIBarButtonItem!
-@IBOutlet weak var topToolbar: UIToolbar!
+@IBOutlet weak var topToolbar: UINavigationBar!
 @IBOutlet weak var shareButton: UIBarButtonItem!
 @IBOutlet weak var topTextField: UITextField!
 @IBOutlet weak var bottomTextField: UITextField!
@@ -61,11 +62,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    fileprivate func hideToolbars(_ hide: Bool) {
-        topToolbar.isHidden = hide
-        bottomToolbar.isHidden = hide
-    }
-
     
     //Keyboard show/hide
     @objc fileprivate func keyboardWillShow(_ notification: Notification) {
@@ -80,13 +76,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    fileprivate func getKeyboardHeight(_ notification: Notification) -> CGFloat {
+    func getKeyboardHeight(_ notification: Notification) -> CGFloat {
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height
     }
     
-    fileprivate func subscribeToKeyBoardNotifications(){
+    func subscribeToKeyBoardNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -98,7 +94,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.removeObserver(self)
     }
     
-    fileprivate func generateImage() -> UIImage {
+    func generateImage() -> UIImage {
         
         hideToolbars(true)
         
@@ -114,7 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Textfields
-    fileprivate func setTextFieldProps(_ textField: UITextField) {
+    func setTextFieldProps(_ textField: UITextField) {
         let textAttributes : [NSAttributedString.Key : Any] = [
             .strokeColor: UIColor.black,
             .foregroundColor: UIColor.white,
@@ -128,7 +124,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.allowsEditingTextAttributes = true
     }
     
-    fileprivate func prepareView() {
+    func prepareView() {
         
         //Prepare Text fields within image view
         self.topTextField.delegate = self
@@ -141,6 +137,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.shareButton.isEnabled = false
     }
     
+    func hideToolbars(_ hide: Bool) {
+        topToolbar.isHidden = hide
+        bottomToolbar.isHidden = hide
+    }
 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
