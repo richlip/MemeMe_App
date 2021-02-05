@@ -83,6 +83,7 @@
                         <outlet property="pickAnImageFromCamera" destination="lsm-Ue-B4c" id="AXn-Bv-uYg"/>
                         <outlet property="shareButton" destination="ZYa-d9-hU7" id="JdO-KD-nwz"/>
                         <outlet property="topTextField" destination="XVE-kE-9gE" id="9a4-my-391"/>
+                        <outlet property="topToolbar" destination="049-Hy-NXw" id="cs7-N2-0Hd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

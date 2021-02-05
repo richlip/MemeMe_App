@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 @IBOutlet weak var bottomToolbar: UIToolbar!
 @IBOutlet weak var pickAnImageButton: UIBarButtonItem!
 @IBOutlet weak var pickAnImageFromCamera: UIBarButtonItem!
-@IBOutlet weak var topToolbar: UINavigationBar!
+@IBOutlet weak var topToolbar: UIToolbar!
 @IBOutlet weak var shareButton: UIBarButtonItem!
 @IBOutlet weak var topTextField: UITextField!
 @IBOutlet weak var bottomTextField: UITextField!
