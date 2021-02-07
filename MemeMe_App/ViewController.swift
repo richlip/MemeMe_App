@@ -27,6 +27,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 @IBOutlet weak var topTextField: UITextField!
 @IBOutlet weak var bottomTextField: UITextField!
     
+
+    @IBAction func topdone(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     
     //  pickAnImageFromLibrary Button
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
@@ -41,6 +49,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.shareButton.isEnabled = false
         imagePickerView.image = nil
            }
+
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeToKeyBoardNotifications()
+    }
     
     // pickAnImageFromCamera Button
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
@@ -64,9 +78,59 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Keyboard show/hide
+//    @objc func keyboardWillShow(_ notification: Notification) {
+//        if bottomTextField.isEditing {
+//            view.frame.origin.y = -getKeyboardHeight(notification)
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(_ notification: Notification) {
+//        if bottomTextField.isEditing {
+//            view.frame.origin.y = 0
+//        }
+//    }
+//
+//    func getKeyboardHeight(_ notification: Notification) -> CGFloat {
+//        let userInfo = notification.userInfo
+//        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+//        return keyboardSize.cgRectValue.height
+//    }
+//
+//    func subscribeToKeyBoardNotifications(){
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        subscribeToKeyBoardNotifications()
+//    }
+//    func unsubscribeToKeyBoardNotifications(){
+//        NotificationCenter.default.removeObserver(self)
+//    }
+    
+    
+
+    
+    //Textfields
+    func setTextFieldProps(_ textField: UITextField) {
+        let textAttributes : [NSAttributedString.Key : Any] = [
+            .strokeColor: UIColor.black,
+            .foregroundColor: UIColor.white,
+            .strikethroughColor: UIColor.white,
+            .font: UIFont(name: "ArialHebrew-Bold", size: 40)!,
+            .strokeWidth: -4.0
+        ]
+        textField.defaultTextAttributes = textAttributes
+        textField.adjustsFontSizeToFitWidth = true
+        textField.textAlignment = .center
+        textField.allowsEditingTextAttributes = true
+    }
+    
+    //keyboard Actions
     @objc func keyboardWillShow(_ notification: Notification) {
         if bottomTextField.isEditing {
             view.frame.origin.y = -getKeyboardHeight(notification)
+            
         }
     }
     
@@ -85,46 +149,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func subscribeToKeyBoardNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        subscribeToKeyBoardNotifications()
-    }
     func unsubscribeToKeyBoardNotifications(){
         NotificationCenter.default.removeObserver(self)
     }
-    
-    
-    func generateImage() -> UIImage {
-        
-        hideToolbars(true)
-        
-        // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
-        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        hideToolbars(false)
-        
-        return memedImage
-    }
-    
-    //Textfields
-    func setTextFieldProps(_ textField: UITextField) {
-        let textAttributes : [NSAttributedString.Key : Any] = [
-            .strokeColor: UIColor.black,
-            .foregroundColor: UIColor.white,
-            .strikethroughColor: UIColor.white,
-            .font: UIFont(name: "ArialHebrew-Bold", size: 40)!,
-            .strokeWidth: -4.0
-        ]
-        textField.defaultTextAttributes = textAttributes
-        textField.adjustsFontSizeToFitWidth = true
-        textField.textAlignment = .center
-        textField.allowsEditingTextAttributes = true
-    }
-    
     func prepareView() {
         
         //Prepare Text fields within image view
@@ -141,6 +171,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func hideToolbars(_ hide: Bool) {
         topToolbar.isHidden = hide
         bottomToolbar.isHidden = hide
+    }
+
+    func generateImage() -> UIImage {
+        
+        hideToolbars(true)
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        hideToolbars(false)
+        
+        return memedImage
     }
 
     

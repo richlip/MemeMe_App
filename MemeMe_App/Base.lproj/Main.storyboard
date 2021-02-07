@@ -23,6 +23,10 @@
                                 <rect key="frame" x="20" y="109" width="374" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="done:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="VBv-GH-VO4"/>
+                                    <action selector="topdone:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="63m-IH-h1A"/>
+                                </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="049-Hy-NXw">
                                 <rect key="frame" x="0.0" y="33" width="414" height="44"/>
@@ -55,6 +59,10 @@
                                 <rect key="frame" x="20" y="711" width="374" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="done:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gYk-SY-WUw"/>
+                                    <action selector="done:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="yO8-Hb-rw6"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,13 +71,13 @@
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2EF-iK-Dj2"/>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" id="KBD-z8-fDR"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-11" id="ND0-Ab-vwG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2a4-ZM-lXg" secondAttribute="bottom" constant="20" id="SI8-ft-HLO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2a4-ZM-lXg" secondAttribute="bottom" constant="80" id="SI8-ft-HLO"/>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uir-mj-bEG"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dC7-2i-NYK"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="centerX" secondItem="JR6-W5-9Ic" secondAttribute="centerX" id="e8Y-jS-VcP"/>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ek1-tm-cB7"/>
                             <constraint firstItem="XVE-kE-9gE" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" constant="32" id="fpJ-zz-21P"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="uC0-JH-Zby"/>
+                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="uC0-JH-Zby"/>
                             <constraint firstItem="XVE-kE-9gE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="vfv-Pm-hK0"/>
                         </constraints>
                     </view>
