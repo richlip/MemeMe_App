@@ -64,13 +64,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Keyboard show/hide
-    @objc fileprivate func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         if bottomTextField.isEditing {
             view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
-    @objc fileprivate func keyboardWillHide(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         if bottomTextField.isEditing {
             view.frame.origin.y = 0
         }
@@ -90,9 +90,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         subscribeToKeyBoardNotifications()
     }
-    fileprivate func unsubscribeToKeyBoardNotifications(){
+    func unsubscribeToKeyBoardNotifications(){
         NotificationCenter.default.removeObserver(self)
     }
+    
     
     func generateImage() -> UIImage {
         
