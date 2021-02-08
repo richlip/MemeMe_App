@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-W5-9Ic">
-                                <rect key="frame" x="20" y="77" width="374" height="736"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-W5-9Ic">
+                                <rect key="frame" x="47" y="173" width="320" height="550"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
-                                <rect key="frame" x="20" y="109" width="374" height="73"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
+                                <rect key="frame" x="47" y="238" width="320" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -56,7 +56,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-ZM-lXg">
-                                <rect key="frame" x="20" y="711" width="374" height="50"/>
+                                <rect key="frame" x="47" y="600" width="320" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -69,16 +69,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2EF-iK-Dj2"/>
+                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="top" secondItem="XVE-kE-9gE" secondAttribute="bottom" constant="312" id="ERo-Lj-ur4"/>
+                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="IaY-v2-4i9"/>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" id="KBD-z8-fDR"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-11" id="ND0-Ab-vwG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2a4-ZM-lXg" secondAttribute="bottom" constant="80" id="SI8-ft-HLO"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="QAS-Wc-whR"/>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uir-mj-bEG"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dC7-2i-NYK"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="centerX" secondItem="JR6-W5-9Ic" secondAttribute="centerX" id="e8Y-jS-VcP"/>
                             <constraint firstItem="JR6-W5-9Ic" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ek1-tm-cB7"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" constant="32" id="fpJ-zz-21P"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="uC0-JH-Zby"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="vfv-Pm-hK0"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmT-Vn-qcJ"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" constant="118" id="tN8-9X-pn6"/>
+                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="uC0-JH-Zby"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
