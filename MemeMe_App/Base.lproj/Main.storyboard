@@ -16,11 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-W5-9Ic">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-W5-9Ic">
                                 <rect key="frame" x="20" y="87" width="374" height="726"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
                                 <rect key="frame" x="47" y="238" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jry-ui-xE1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -38,9 +41,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-Fy-Oq6">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-Fy-Oq6">
                                 <rect key="frame" x="0.0" y="813" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Library" id="ji2-nh-cQ0">
                                         <connections>
@@ -55,8 +57,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-ZM-lXg">
-                                <rect key="frame" x="47" y="600" width="320" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Bottom Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-ZM-lXg">
+                                <rect key="frame" x="47" y="698" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="huF-oS-3NY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -68,19 +73,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2EF-iK-Dj2"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="top" secondItem="XVE-kE-9gE" secondAttribute="bottom" constant="312" id="ERo-Lj-ur4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FCc-Fy-Oq6" secondAttribute="bottom" constant="-44" id="1LA-M5-AkH"/>
+                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6xq-N2-ycN"/>
+                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" constant="10" id="DCz-SK-gK5"/>
+                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H7T-6Q-UGc"/>
                             <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="IaY-v2-4i9"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" id="KBD-z8-fDR"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-11" id="ND0-Ab-vwG"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="QAS-Wc-whR"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uir-mj-bEG"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="FCc-Fy-Oq6" secondAttribute="centerX" id="Opk-Jf-SwD"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="238" id="Qev-BN-CMc"/>
+                            <constraint firstItem="FCc-Fy-Oq6" firstAttribute="leading" secondItem="049-Hy-NXw" secondAttribute="leading" id="UJi-IX-1dK"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="049-Hy-NXw" secondAttribute="centerX" id="a7V-WW-yyO"/>
+                            <constraint firstItem="FCc-Fy-Oq6" firstAttribute="top" secondItem="JR6-W5-9Ic" secondAttribute="bottom" id="bFN-28-IP0"/>
                             <constraint firstItem="049-Hy-NXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dC7-2i-NYK"/>
-                            <constraint firstItem="049-Hy-NXw" firstAttribute="centerX" secondItem="JR6-W5-9Ic" secondAttribute="centerX" id="e8Y-jS-VcP"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ek1-tm-cB7"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmT-Vn-qcJ"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" constant="118" id="tN8-9X-pn6"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="uC0-JH-Zby"/>
+                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="centerX" secondItem="FCc-Fy-Oq6" secondAttribute="centerX" id="fjC-nK-FP5"/>
+                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="centerX" secondItem="2a4-ZM-lXg" secondAttribute="centerX" id="nSg-cp-P82"/>
+                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nuM-CX-UEo"/>
+                            <constraint firstItem="XVE-kE-9gE" firstAttribute="leading" secondItem="2a4-ZM-lXg" secondAttribute="leading" id="syA-y6-mUK"/>
+                            <constraint firstAttribute="bottom" secondItem="2a4-ZM-lXg" secondAttribute="bottom" constant="148" id="wab-6e-eGX"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
