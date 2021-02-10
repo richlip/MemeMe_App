@@ -82,7 +82,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             .strokeColor: UIColor.black,
             .foregroundColor: UIColor.white,
             .strikethroughColor: UIColor.white,
-            .font: UIFont(name: "ArialHebrew-Bold", size: 40)!,
+            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
             .strokeWidth: -4.0
         ]
         textField.defaultTextAttributes = textAttributes
@@ -90,7 +90,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.textAlignment = .center
         textField.allowsEditingTextAttributes = true
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

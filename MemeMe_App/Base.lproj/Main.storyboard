@@ -24,7 +24,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Jry-ui-xE1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="done:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="VBv-GH-VO4"/>
@@ -62,7 +62,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="huF-oS-3NY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="done:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gYk-SY-WUw"/>
