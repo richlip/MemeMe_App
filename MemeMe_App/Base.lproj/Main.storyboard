@@ -42,7 +42,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-Fy-Oq6">
-                                <rect key="frame" x="0.0" y="813" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="1295" width="0.0" height="44"/>
                                 <items>
                                     <barButtonItem title="Library" id="ji2-nh-cQ0">
                                         <connections>

@@ -35,6 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sender.resignFirstResponder()
     }
     
+
+    
     //  pickAnImageFromLibrary Button
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
             let albumController = UIImagePickerController()
@@ -82,7 +84,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             .strokeColor: UIColor.black,
             .foregroundColor: UIColor.white,
             .strikethroughColor: UIColor.white,
-            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .font: UIFont(name: "HelveticaNeue-CondensedBold", size: 40)!,
             .strokeWidth: -4.0
         ]
         textField.defaultTextAttributes = textAttributes
@@ -93,6 +95,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareView()
       
         // Keyboard will show
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
