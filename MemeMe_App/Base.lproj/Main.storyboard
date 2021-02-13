@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
-                                <rect key="frame" x="47" y="238" width="320" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
+                                <rect key="frame" x="47" y="238" width="141.33333333333334" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Jry-ui-xE1"/>
                                 </constraints>
@@ -28,8 +28,9 @@
                                     <action selector="topdone:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="63m-IH-h1A"/>
                                 </connections>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="049-Hy-NXw">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="049-Hy-NXw">
                                 <rect key="frame" x="0.0" y="-11" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem image="square.and.arrow.up" catalog="system" id="ZYa-d9-hU7">
                                         <connections>
@@ -39,7 +40,7 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-Fy-Oq6">
-                                <rect key="frame" x="0.0" y="687" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="682" width="414" height="49"/>
                                 <items>
                                     <barButtonItem title="Library" id="ji2-nh-cQ0">
                                         <connections>
@@ -54,8 +55,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Bottom Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-ZM-lXg">
-                                <rect key="frame" x="47" y="548" width="320" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Bottom Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-ZM-lXg">
+                                <rect key="frame" x="105.33333333333334" y="548" width="203.66666666666666" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="huF-oS-3NY"/>
                                 </constraints>
@@ -66,36 +67,17 @@
                                     <action selector="done:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="yO8-Hb-rw6"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-W5-9Ic">
-                                <rect key="frame" x="0.0" y="43" width="414" height="626"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-W5-9Ic">
+                                <rect key="frame" x="0.0" y="33" width="414" height="654"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="FCc-Fy-Oq6" secondAttribute="bottom" constant="-44" id="1LA-M5-AkH"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5ub-0Y-5k6"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6xq-N2-ycN"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="top" secondItem="049-Hy-NXw" secondAttribute="bottom" constant="10" id="DCz-SK-gK5"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H7T-6Q-UGc"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="IaY-v2-4i9"/>
-                            <constraint firstItem="049-Hy-NXw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-11" id="ND0-Ab-vwG"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="FCc-Fy-Oq6" secondAttribute="centerX" id="Opk-Jf-SwD"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="238" id="Qev-BN-CMc"/>
-                            <constraint firstItem="FCc-Fy-Oq6" firstAttribute="leading" secondItem="049-Hy-NXw" secondAttribute="leading" id="UJi-IX-1dK"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XDn-Ft-RbG"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="049-Hy-NXw" secondAttribute="centerX" id="a7V-WW-yyO"/>
-                            <constraint firstItem="FCc-Fy-Oq6" firstAttribute="top" secondItem="JR6-W5-9Ic" secondAttribute="bottom" id="bFN-28-IP0"/>
-                            <constraint firstItem="049-Hy-NXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dC7-2i-NYK"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e15-Mh-uU3"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="centerX" secondItem="FCc-Fy-Oq6" secondAttribute="centerX" id="fjC-nK-FP5"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gV8-85-hPM"/>
-                            <constraint firstItem="2a4-ZM-lXg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8Q-LL-W3E"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="centerX" secondItem="2a4-ZM-lXg" secondAttribute="centerX" id="nSg-cp-P82"/>
-                            <constraint firstItem="JR6-W5-9Ic" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nuM-CX-UEo"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o9z-Aq-hto"/>
-                            <constraint firstItem="XVE-kE-9gE" firstAttribute="leading" secondItem="2a4-ZM-lXg" secondAttribute="leading" id="syA-y6-mUK"/>
-                            <constraint firstAttribute="bottom" secondItem="2a4-ZM-lXg" secondAttribute="bottom" constant="148" id="wab-6e-eGX"/>
+                            <constraint firstItem="FCc-Fy-Oq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7cN-Zo-GzJ"/>
+                            <constraint firstItem="FCc-Fy-Oq6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9dL-W8-ZIc"/>
+                            <constraint firstAttribute="bottom" secondItem="FCc-Fy-Oq6" secondAttribute="bottom" constant="5" id="klL-cn-ch7"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
