@@ -137,7 +137,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.setTextFieldProps(self.bottomTextField)
         
         //share button settings
-        self.shareButton.isEnabled = false
+        self.shareButton.isEnabled = true
     }
     
     func hideToolbars(_ hide: Bool) {
