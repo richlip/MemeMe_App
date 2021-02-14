@@ -86,7 +86,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             .foregroundColor: UIColor.white,
             .strikethroughColor: UIColor.white,
             .font: UIFont(name: "HelveticaNeue-CondensedBold", size: 40)!,
-            .strokeWidth: -4.0
+            .strokeWidth: -5.0
         ]
         textField.defaultTextAttributes = textAttributes
         textField.adjustsFontSizeToFitWidth = true
