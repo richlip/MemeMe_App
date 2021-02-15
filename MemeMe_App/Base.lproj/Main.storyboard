@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-kE-9gE">
-                                <rect key="frame" x="20" y="89" width="374" height="40"/>
+                                <rect key="frame" x="20" y="89" width="374" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Jry-ui-xE1"/>
+                                    <constraint firstAttribute="height" constant="48" id="0ci-sr-EKr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <connections>
                                     <action selector="done:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="VBv-GH-VO4"/>
                                     <action selector="topdone:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="63m-IH-h1A"/>
@@ -58,13 +58,13 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Bottom Text" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-ZM-lXg">
-                                <rect key="frame" x="20" y="548" width="374" height="40"/>
+                                <rect key="frame" x="20" y="540" width="374" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="huF-oS-3NY"/>
+                                    <constraint firstAttribute="height" constant="48" id="TC2-r7-hgL"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <connections>
                                     <action selector="done:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gYk-SY-WUw"/>
                                     <action selector="done:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="yO8-Hb-rw6"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="123.09782608695653"/>
+            <point key="canvasLocation" x="101" y="-57"/>
         </scene>
     </scenes>
     <resources>
